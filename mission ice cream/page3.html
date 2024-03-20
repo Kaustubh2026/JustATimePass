@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&display=swap" rel="stylesheet">
+
+  <title>Page 3</title>
+  <style>
+    body { font-family: 'Cormorant Upright', cursive; /* Corrected font-family */
+     
+    background-image: url(https://t3.ftcdn.net/jpg/05/30/69/36/360_F_530693610_LuW8Xj57xW9kv5smbXMmfWKiRApKjKWE.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      
+      text-align: left;
+      margin-right: auto; /* Push content to the left */
+      margin-left: -750px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #9f3c2e;
+      color: white;
+    }
+    p{
+
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1 style="color: rgb(249, 88, 7);">Haha, Mala Mhit Hote, <span id="userName"></span></h1>
+    <h4 style="color: rgb(182, 182, 81);">So Kulfi Ice Cream JM Road Aata 9 chy asspass !!?</h4>
+    <button onclick="finalPage()"><a href="page1.html" style="text-decoration: none;">Next</a></button>
+  </div>
+
+  <script>
+    var userName = localStorage.getItem("userName");
+    document.getElementById("userName").innerText = userName;
+
+    function finalPage() {
+      window.location.href = "finalpage.html";
+    }
+  </script>
+</body>
+</html>

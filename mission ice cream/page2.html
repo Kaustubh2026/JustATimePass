@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 2</title>
+  <style>
+    body {
+      font-family: 'Cormorant Upright', cursive;
+      background-image: url(https://t3.ftcdn.net/jpg/05/30/69/36/360_F_530693610_LuW8Xj57xW9kv5smbXMmfWKiRApKjKWE.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: left;
+      margin-right: auto; /* Push content to the left */
+      margin-left: -750px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #9f3c2e;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1 style="color: rgb(249, 88, 7);">Oyy !! <span id="userName"></span></h1>
+    <p style="color: rgb(249, 88, 7);">Aaj Ice cream?</p>
+    <button onclick="yes()">Yes</button>
+    <button id="no-button" onclick="moveNoButton()">No</button>
+  </div>
+
+  <script>
+    var userName = localStorage.getItem("userName");
+    document.getElementById("userName").innerText = userName;
+
+    function yes() {
+      window.location.href = "page3.html";
+    }
+
+    function moveNoButton() {
+      var userName = localStorage.getItem("userName");
+      document.getElementById("userName").innerText = "Parat Vichar Kr, " + userName;
+      var button = document.getElementById("no-button");
+      button.style.position = "absolute";
+      button.style.bottom = Math.floor(Math.random() * 90) + "vh";
+      button.style.right = Math.floor(Math.random() * 90) + "vw";
+      button.style.left = "auto";
+    }
+  </script>
+</body>
+</html>

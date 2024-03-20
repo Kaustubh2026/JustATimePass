@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&display=swap" rel="stylesheet">
+  <title>Best Friend's Website</title>
+  <style>
+    body {
+      font-family: 'Cormorant Upright', cursive;
+      background-image: url(https://t3.ftcdn.net/jpg/05/30/69/36/360_F_530693610_LuW8Xj57xW9kv5smbXMmfWKiRApKjKWE.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #content {
+      text-align: left;
+      margin-right: auto; /* Push content to the left */
+      margin-left: 250px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #9f3c2e;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="content">
+      <h1 style="color: rgb(249, 88, 7);">Ayy Nav Tak Tuze</h1>
+      <input type="text" id="nameInput">
+      <button onclick="submitName()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function submitName() {
+      var name = document.getElementById("nameInput").value;
+      if (name.toLowerCase() === "revati") {
+        name = "Reva";
+      }
+      localStorage.setItem("userName", name);
+      // For demonstration purpose, I'm redirecting to the same page.
+      // Replace "page2.html" with your desired destination.
+      window.location.href = "page2.html";
+    }
+  </script>
+</body>
+</html>
